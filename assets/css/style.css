@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 
 a,
@@ -13,78 +14,195 @@ button {
 
 header {
   background-color: #ffc017;
-  padding: 20px 0;
   border-bottom: 1px solid black;
-  position: relative;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 2rem;
 }
 
-header img {
-  height: 40px;
+.header img {
+  margin-left: 6rem;
+  width: 15rem;
 }
 
-nav ul {
-  list-style: none;
+.header nav ul {
   display: flex;
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-  margin: 0 15px;
+.header nav ul li {
+  margin: 0 1rem;
 }
 
-nav ul li a {
+.header nav ul li a {
   text-decoration: none;
   color: black;
-  font-weight: bold;
 }
 
-nav ul li:last-child {
-  border: 1px solid black;
-  border-radius: 2px;
+.header nav ul li:last-child a {
   color: white;
-}
-.hero {
-  background-color: #ffc017;
+  background-color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin-left: 2rem;
+}
+
+.hero {
+  background-color: #ffc017;
+  padding: 2rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid black;
+}
+
+.hero .container {
+  margin-left: 2rem;
 }
 
 .hero h1 {
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 4rem; /* Aumenta la dimensione del font */
+  font-weight: 800; /* Aumenta il peso del font per renderlo più bold */
+  margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 600px; /* Imposta una larghezza massima per il paragrafo */
+}
+
+.hero p::before {
+  white-space: pre; /* Mantiene il capo dopo "expertise" */
+  display: block;
+  line-height: 1.6; /* Mantiene l'interlinea */
 }
 
 .hero button {
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: #333;
-  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: black;
+  color: white;
   border: none;
   border-radius: 30px;
   cursor: pointer;
 }
 
 .hero-img {
-  margin-top: 30px;
   display: flex;
   justify-content: flex-end;
 }
 
 .hero-img img {
+  width: 50%;
   height: auto;
+}
+
+.hero button {
+  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.hero-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-img img {
+  width: 70%;
+  height: auto;
+}
+
+.trending-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem 6rem;
+}
+
+.trending-section h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.trending-section img:first-child {
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: auto;
+}
+
+.trending-section .articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.trending-section .articles div {
+  flex: 0 1 48%; /* Due colonne con spaziatura */
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trending-section .articles div img:nth-child(2) {
+  flex: 0 0 15%;
+  margin-right: 0.5rem;
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.trending-section .articles div p {
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.trending-section .articles div p:nth-child(3) {
+  font-weight: bold;
+}
+
+.trending-section .articles div p a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.trending-section .articles div p a:hover {
+  text-decoration: underline;
+}
+
+.trending-section .articles div p:last-child {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.trending-section .articles div img:last-child {
+  flex: 0 0 auto;
+  width: 16px;
+  height: auto;
+  margin-left: 0.5rem;
 }
